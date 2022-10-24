@@ -1,4 +1,4 @@
-package com.fuelsystem;
+package com.model;
 import java.sql.*;
 
 public class DbConnect {

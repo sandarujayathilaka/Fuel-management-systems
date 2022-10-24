@@ -1,20 +1,20 @@
-package com.fuelsystem;
+package com.model;
 
-public class Employer {
-
+public class ManagerAcc {
+	
 	private int id;
 	private String name;
 	private String address;
 	private String tel;
-	private String nic;
+	private String password;
 	
-	public Employer(int id, String name, String address, String tel, String nic) {
-
+	public ManagerAcc(int id, String name, String address, String tel, String password) {
+		
 		this.id = id;
 		this.name = name;
 		this.address = address;
 		this.tel = tel;
-		this.nic = nic;
+		this.password = password;
 	}
 
 	public int getId() {
@@ -33,9 +33,9 @@ public class Employer {
 		return tel;
 	}
 
-	public String getNic() {
-		return nic;
+	public String getPassword() {
+		return password;
 	}
 
-	
+
 }

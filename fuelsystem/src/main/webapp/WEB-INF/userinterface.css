@@ -1,0 +1,111 @@
+@charset "ISO-8859-1";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: sans-serif;
+}
+
+nav {
+	height: 70px;
+	background-color: rgb(24, 176, 123);
+	width: 100%;
+	position: fixed;
+	top: 0px;
+	z-index: 0;
+}
+
+#banner {
+	padding: 15px 0px 0px 20px;
+}
+
+#logbtn {
+	float: right;
+	margin-left: 465px;
+	margin-right: 20px;
+	margin-top: 16px;
+}
+
+.log {
+	width: 100px;
+	height: 30px;
+	background-color: transparent;
+	border-radius: 10px;
+	color: white;
+	font-size: 14px;
+	transition-duration: 0.4s;
+	border-color: rgb(0, 0, 0);
+	color: rgb(255, 255, 255);
+	background-color: black;
+}
+
+.log:hover {
+	background-color: darkmagenta;
+	color: white;
+	border-color: darkmagenta;
+}
+
+#verticalnav ul li {
+	list-style: none;
+	display: block;
+	line-height: 250%;
+	text-align: left;
+	padding: 10px;
+}
+
+#verticalnav {
+	background-color: #0d6efd;
+	width: 300px;
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+}
+
+#verticalnav ul li a {
+	text-decoration: none;
+	color: whitesmoke;
+}
+
+#verticalnav .closebtn {
+	position: absolute;
+	top: 0;
+}
+
+#adminbanner {
+	padding: 25px;
+}
+
+#adminbanner h2 {
+	text-align: center;
+	color: rgb(255, 255, 255);
+}
+
+.list:hover {
+	background-color: rgb(62, 63, 62);
+	color: black;
+}
+
+.list a {
+	padding-left: 5px;
+	padding-top: 10px;
+	margin-left: 5px;
+}
+
+.admintable {
+	position: relative;
+	margin: 10% 30% 0% 30%;
+	width: 60%;
+	border-collapse: collapse;
+	border-color: gray;
+	overflow: scroll;
+}
+
+.admintable td, th {
+	padding: 20px;
+	vertical-align: middle;
+}

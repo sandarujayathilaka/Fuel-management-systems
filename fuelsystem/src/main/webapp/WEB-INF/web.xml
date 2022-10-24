@@ -1,67 +1,112 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
-  <display-name>fuelsystem</display-name>
-  <welcome-file-list>
-    <welcome-file>index.html</welcome-file>
-    <welcome-file>index.jsp</welcome-file>
-    <welcome-file>index.htm</welcome-file>
-    <welcome-file>default.html</welcome-file>
-    <welcome-file>default.jsp</welcome-file>
-    <welcome-file>default.htm</welcome-file>
-  </welcome-file-list>
-  
-  <servlet>
-  <servlet-name>empdetails</servlet-name>
-  <servlet-class>com.fuelsystem.employerservlet</servlet-class>
-  </servlet>
-  
-   <servlet>
-  <servlet-name>addData</servlet-name>
-  <servlet-class>com.fuelsystem.insertEmpServlet</servlet-class>
-  </servlet>
-  
-   <servlet>
-  <servlet-name>updateData</servlet-name>
-  <servlet-class>com.fuelsystem.UpdateEmpServlet</servlet-class>
-  </servlet>
-  
-   <servlet>
-  <servlet-name>deleteData</servlet-name>
-  <servlet-class>com.fuelsystem.DeleteEmpServlet</servlet-class>
-  </servlet>
-  
-   <servlet>
-  <servlet-name>allempdata</servlet-name>
-  <servlet-class>com.fuelsystem.EmpAllServlet</servlet-class>
-  </servlet>
-  
-   <servlet-mapping>
-  <servlet-name>deleteData</servlet-name>
-  <url-pattern>/deletedetails</url-pattern>
-  </servlet-mapping>
-  
-  
-   <servlet-mapping>
-  <servlet-name>allempdata</servlet-name>
-  <url-pattern>/allempdetails</url-pattern>
-  </servlet-mapping>
-  
-   <servlet-mapping>
-  <servlet-name>updateData</servlet-name>
-  <url-pattern>/updatedetails</url-pattern>
-  </servlet-mapping>
-  
-   <servlet-mapping>
-  <servlet-name>addData</servlet-name>
-  <url-pattern>/insertdata</url-pattern>
-  </servlet-mapping>
-  
-  <servlet-mapping>
-  <servlet-name>empdetails</servlet-name>
-  <url-pattern>/employerdetails</url-pattern>
-  </servlet-mapping>
-  
-  
-  
-  
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>fuelsystem</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+	</welcome-file-list>
+
+	<servlet>
+		<servlet-name>empdetails</servlet-name>
+		<servlet-class>com.servlets.employerservlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>addData</servlet-name>
+		<servlet-class>com.servlets.insertEmpServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>updateData</servlet-name>
+		<servlet-class>com.servlets.UpdateEmpServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>deleteData</servlet-name>
+		<servlet-class>com.servlets.DeleteEmpServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>allempdata</servlet-name>
+		<servlet-class>com.servlets.EmpAllServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>addSerManager</servlet-name>
+		<servlet-class>com.servlets.InsertSmanServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>fetchSerManager</servlet-name>
+		<servlet-class>com.servlets.SerManAllServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>UpdateSerManager</servlet-name>
+		<servlet-class>com.servlets.updateManagerServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>deleteSerManager</servlet-name>
+		<servlet-class>com.servlets.DeleteSerManager</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>deleteSerManager</servlet-name>
+		<url-pattern>/deleteSerMan</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>UpdateSerManager</servlet-name>
+		<url-pattern>/updateSerManage</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>fetchSerManager</servlet-name>
+		<url-pattern>/fetchSerMan</url-pattern>
+
+	</servlet-mapping>
+
+
+	<servlet-mapping>
+		<servlet-name>addSerManager</servlet-name>
+		<url-pattern>/insertSmanager</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>deleteData</servlet-name>
+		<url-pattern>/deletedetails</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet-mapping>
+		<servlet-name>allempdata</servlet-name>
+		<url-pattern>/allempdetails</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>updateData</servlet-name>
+		<url-pattern>/updatedetails</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>addData</servlet-name>
+		<url-pattern>/insertdata</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>empdetails</servlet-name>
+		<url-pattern>/employerdetails</url-pattern>
+	</servlet-mapping>
+
+
+
+
 </web-app>

@@ -1,4 +1,5 @@
-package com.fuelsystem;
+package com.servlets;
+
 
 import java.io.IOException;
 import java.util.List;
@@ -10,36 +11,35 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.model.SerManagerDButil;
 
-@WebServlet("/DeleteEmpServlet")
-public class DeleteEmpServlet extends HttpServlet {
+
+/**
+ * Servlet implementation class DeleteSerManager
+ */
+@WebServlet("/DeleteSerManager")
+public class DeleteSerManager extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		String id = request.getParameter("id");
-		
-		boolean isTrue = employerDButil.deleteEmp(id);
-		
-		if(isTrue== true) {
-			
-			RequestDispatcher dis = request.getRequestDispatcher("addemployer.jsp");
+
+		boolean isTrue = SerManagerDButil.deleteSerManager(id);
+
+		if (isTrue == true) {
+
+			RequestDispatcher dis = request.getRequestDispatcher("fetchSerMan");
 			dis.forward(request, response);
-			
+
 		}
-		
+
 		else {
-			
-			List<Employer> empdetails =employerDButil.getEmpDetails(id);
-			request.setAttribute("empdetails", empdetails);
-			
-			RequestDispatcher dis = request.getRequestDispatcher("empacc.jsp");
+
+			RequestDispatcher dis = request.getRequestDispatcher("notcompleted.jsp");
 			dis.forward(request, response);
 		}
-		
-		
-		
+
 	}
 
 }
