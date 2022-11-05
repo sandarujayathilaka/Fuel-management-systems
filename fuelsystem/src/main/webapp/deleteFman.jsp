@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" />
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
@@ -13,22 +13,21 @@
 
 	String id =request.getParameter("id");
 	String name=request.getParameter("name");
-	String branch=request.getParameter("branch");
 	String tel=request.getParameter("tel");
-	String email=request.getParameter("email");
+	String nic=request.getParameter("nic");
 	String password=request.getParameter("password");
 	String address=request.getParameter("address");
-	String startdate=request.getParameter("startdate");
+	String marit=request.getParameter("marit");
 	
 
 %>
 
 <div class="container p-5 my-5 bg-dark text-white">
 
-	<form method = "post" action="UpdateFuelM">
+	<form method = "post" action="deleteFMan">
 	
 	<div class="mb-3">
-        <label class="form-label" for="id" >MID</label>
+        <label class="form-label" for="id" >FID</label>
         <input type="text" value="<%=id%>" readonly name="id" class="form-control" id="inputid">
     </div>
 
@@ -38,8 +37,8 @@
     </div>
     
     <div class="mb-3">
-        <label class="form-label" for="branch">Branch</label>
-        <input type="text" name="branch" class="form-control" id="branch" value="<%=branch%>" placeholder="Eg:077xxxxxxx">
+        <label class="form-label" for="branch">NIC</label>
+        <input type="text" name="nic" class="form-control" id="nic" value="<%=nic%>" placeholder="Eg:077xxxxxxx">
     </div>
     
      <div class="mb-3">
@@ -47,8 +46,8 @@
         <input type="text" name="tel" class="form-control" id="tel" value="<%=tel%>" placeholder="Eg:Matara,Akuressa">
     </div>
      <div class="mb-3">
-        <label class="form-label" for="email">Email</label>
-        <input type="email" name="email" class="form-control" id="email" value="<%=email%>" placeholder="NIC">
+        <label class="form-label" for="email">Status</label>
+        <input type="text" name="marit" class="form-control" id="marit" value="<%=marit%>" placeholder="NIC">
     </div>
     <div class="mb-3">
         <label class="form-label" for="pass">password</label>
@@ -58,12 +57,9 @@
         <label class="form-label" for="add">address</label>
         <input type="text" name="address" class="form-control" id="add" value="<%=address%>" placeholder="NIC">
     </div>
-    <div class="mb-3">
-        <label class="form-label" for="date">Startdate</label>
-        <input type="text" name="startdate" class="form-control" id="date" value="<%=startdate%>" placeholder="NIC">
-    </div>
     
-    <button type="submit" class="btn btn-primary" name="sub">Update Details</button>
+    
+    <button type="submit" class="btn btn-primary" name="sub">Delete Manager</button>
     </form>
 </div>
 

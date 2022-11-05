@@ -1,7 +1,7 @@
 package com.servlets;
 
-
 import java.io.IOException;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -9,29 +9,25 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.model.SerManagerDButil;
+import com.model.AdminDButil;
 
-
-@WebServlet("/managerservlet")
-public class InsertSmanServlet extends HttpServlet {
+@WebServlet("/insertAdmin")
+public class InsertAdmin extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	
+
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String id = request.getParameter("id");
 		String name = request.getParameter("name");
 		String tel =request.getParameter("tel");
 		String address = request.getParameter("address");
-		String branch =request.getParameter("branch");
-		String password =request.getParameter("password");
-		String date =request.getParameter("startdate");
-		String email =request.getParameter("email");
+		String nic =request.getParameter("nic");
+		String uname =request.getParameter("uname");
+		String pass =request.getParameter("pass");
 		
-		
-	boolean isTrue = SerManagerDButil.insertSmanager(id,name, tel, address,branch,password,date,email);
+		boolean isTrue = AdminDButil.insertAdmin(name, tel, address, nic,uname,pass);
 		
 		if(isTrue ==true) {
-			RequestDispatcher dis = request.getRequestDispatcher("fetchSerMan");
+			RequestDispatcher dis = request.getRequestDispatcher("allempdetails");
 			dis.forward(request, response);		
 		}
 		
@@ -40,10 +36,6 @@ public class InsertSmanServlet extends HttpServlet {
 			dis.forward(request, response);	
 			
 		}
-		
-		
-		
 	}
 
 }
-

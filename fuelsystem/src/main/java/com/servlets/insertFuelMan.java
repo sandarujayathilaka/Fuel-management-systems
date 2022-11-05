@@ -9,23 +9,31 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.model.employerDButil;
+import com.model.FuelManDButil;
 
-@WebServlet("/insertEmpServlet")
-public class insertEmpServlet extends HttpServlet {
+
+
+@WebServlet("/insertFuelMan")
+public class insertFuelMan extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
+
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+
+
+		String id = request.getParameter("id");
 		String name = request.getParameter("name");
 		String tel =request.getParameter("tel");
 		String address = request.getParameter("address");
+		String password =request.getParameter("password");
 		String nic =request.getParameter("nic");
+		String marit =request.getParameter("marit");
 		
-		boolean isTrue = employerDButil.insertEmp(name, tel, address, nic);
+		
+	boolean isTrue = FuelManDButil.insertFuelmanager(id,name, tel, address,password,nic,marit);
 		
 		if(isTrue ==true) {
-			RequestDispatcher dis = request.getRequestDispatcher("allempdetails");
+			RequestDispatcher dis = request.getRequestDispatcher("FuelManAllServlet");
 			dis.forward(request, response);		
 		}
 		
@@ -34,6 +42,9 @@ public class insertEmpServlet extends HttpServlet {
 			dis.forward(request, response);	
 			
 		}
+		
+		
+		
 	}
 
 }

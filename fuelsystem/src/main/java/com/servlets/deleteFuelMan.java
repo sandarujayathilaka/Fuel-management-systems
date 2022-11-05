@@ -1,8 +1,6 @@
 package com.servlets;
 
-
 import java.io.IOException;
-
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -11,25 +9,28 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.model.SerManagerDButil;
+import com.model.FuelManDButil;
 
 
 /**
- * Servlet implementation class DeleteSerManager
+ * Servlet implementation class deleteFuelMan
  */
-@WebServlet("/DeleteSerManager")
-public class DeleteSerManager extends HttpServlet {
+@WebServlet("/deleteFuelMan")
+public class deleteFuelMan extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+		
 		String id = request.getParameter("id");
 
-		boolean isTrue = SerManagerDButil.deleteSerManager(id);
+		boolean isTrue = FuelManDButil.deleteFuelManager(id);
 
 		if (isTrue == true) {
 
-			RequestDispatcher dis = request.getRequestDispatcher("fetchSerMan");
+			RequestDispatcher dis = request.getRequestDispatcher("FuelManAllServlet");
 			dis.forward(request, response);
 
 		}
@@ -39,7 +40,7 @@ public class DeleteSerManager extends HttpServlet {
 			RequestDispatcher dis = request.getRequestDispatcher("notcompleted.jsp");
 			dis.forward(request, response);
 		}
-
+		
 	}
 
 }

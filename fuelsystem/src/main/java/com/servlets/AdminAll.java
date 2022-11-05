@@ -10,12 +10,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.model.Employer;
-import com.model.employerDButil;
+import com.model.Admin;
+import com.model.AdminDButil;
 
 
-@WebServlet("/EmpAllServlet")
-public class EmpAllServlet extends HttpServlet {
+@WebServlet("/AdminAll")
+public class AdminAll extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	
@@ -23,13 +23,13 @@ public class EmpAllServlet extends HttpServlet {
 		
 		
 		try {
-		List<Employer> empdetails = employerDButil.getallemp();
-		request.setAttribute("empdetails", empdetails);
+		List<Admin> adminDetails = AdminDButil.getallemp();
+		request.setAttribute("adminDetails",adminDetails);
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
 		
-		RequestDispatcher dis = request.getRequestDispatcher("empAllDetails.jsp");
+		RequestDispatcher dis = request.getRequestDispatcher("adminAllDetails.jsp");
 		dis.forward(request, response);
 		
 		}
@@ -38,13 +38,13 @@ public class EmpAllServlet extends HttpServlet {
 		
 		
 		try {
-		List<Employer> empdetails = employerDButil.getallemp();
-		request.setAttribute("empdetails", empdetails);
+		List<Admin> adminDetails = AdminDButil.getallemp();
+		request.setAttribute("adminDetails",adminDetails);
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
 		
-		RequestDispatcher dis = request.getRequestDispatcher("empAllDetails.jsp");
+		RequestDispatcher dis = request.getRequestDispatcher("adminAllDetails.jsp");
 		dis.forward(request, response);
 		
 		}

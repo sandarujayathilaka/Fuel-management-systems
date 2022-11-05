@@ -10,45 +10,51 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.model.Employer;
-import com.model.employerDButil;
+import com.model.FuelManDButil;
+import com.model.FuelManagerAcc;
 
 
-@WebServlet("/UpdateEmpServlet")
-public class UpdateEmpServlet extends HttpServlet {
+/**
+ * Servlet implementation class UpdateFuelMan
+ */
+@WebServlet("/UpdateFuelMan")
+public class UpdateFuelMan extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
+	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
 
 		String id = request.getParameter("id");
 		String name = request.getParameter("name");
 		String tel =request.getParameter("tel");
 		String address =request.getParameter("address");
+		String pass =request.getParameter("password");
 		String nic =request.getParameter("nic");
+		String marit =request.getParameter("marit");
 		
-		boolean isTrue = employerDButil.updateemp(id, name, tel, address, nic);
+		boolean isTrue = FuelManDButil.updateFuelMan(id,name,tel,address,pass,nic,marit);
 		
 		if(isTrue== true) {
 			
-			List<Employer> empdetails =employerDButil.getEmpDetails(id);
-			request.setAttribute("empdetails", empdetails);
+			List<FuelManagerAcc> serMdetails = FuelManDButil.getFuelManDetails(id);
+			request.setAttribute("serMdetails", serMdetails);
 			
-			//response.sendRedirect("empAllDetails.jsp");
 			
-			RequestDispatcher dis = request.getRequestDispatcher("allempdetails");
+			RequestDispatcher dis = request.getRequestDispatcher("FuelManAllServlet");
 			dis.forward(request, response);
 			
 		}
 		
 		else {
 			
-			List<Employer> empdetails =employerDButil.getEmpDetails(id);
-			request.setAttribute("empdetails", empdetails);
+			List<FuelManagerAcc> serMdetails = FuelManDButil.getFuelManDetails(id);
+			request.setAttribute("serMdetails", serMdetails);
 			
-			RequestDispatcher dis = request.getRequestDispatcher("empAllDetails.jsp");
+			
+			RequestDispatcher dis = request.getRequestDispatcher("notcompleted.jsp");
 			dis.forward(request, response);
 		}
-		
 		
 	}
 

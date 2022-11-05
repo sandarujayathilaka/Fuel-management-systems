@@ -6,15 +6,15 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SerManagerDButil {
+public class FuelManDButil {
 	
 	private static boolean isSuccess;
 	private static Connection con = null;
 	private static Statement st = null;
 	private static ResultSet rs = null;
 	
-	public static boolean insertSmanager(String id,String name, String tel, String address, String branch, String password,
-			String date, String email) {
+	public static boolean insertFuelmanager(String id,String name, String tel, String address, String password,
+			String nic, String marit) {
 
 		boolean isSuccess = false;
 
@@ -22,8 +22,7 @@ public class SerManagerDButil {
 
 			con = DbConnect.getConnection();
 			st = con.createStatement();
-			String sql = "insert into sermanager values ('"+id+"','" + name + "','" + tel + "','" + address + "','" + branch
-					+ "','" + password + "','" + date + "','" + email + "')";
+			String sql = "insert into fuelmanager values ('"+id+"','" + name + "','" + tel + "','" + address + "','" + password + "','" + nic + "','" + marit + "')";
 			int count = st.executeUpdate(sql);
 
 			if (count > 0) {
@@ -43,15 +42,15 @@ public class SerManagerDButil {
 
 	}
 
-	public static List<SerManagerAcc> getSerManDetails() {
+	public static List<FuelManagerAcc> getFuelManDetails() {
 
-		ArrayList<SerManagerAcc> sman = new ArrayList<>();
+		ArrayList<FuelManagerAcc> sman = new ArrayList<>();
 
 		try {
 
 			con = DbConnect.getConnection();
 			st = con.createStatement();
-			String sql = "select * from sermanager";
+			String sql = "select * from fuelmanager";
 			rs = st.executeQuery(sql);
 
 			while (rs.next()) {
@@ -60,12 +59,11 @@ public class SerManagerDButil {
 				String name = rs.getString(2);
 				String tel = rs.getString(3);
 				String address = rs.getString(4);
-				String branch = rs.getString(5);
-				String password = rs.getString(6);
-				String startdate = rs.getString(7);
-				String email = rs.getString(8);
+				String password = rs.getString(5);
+				String nic = rs.getString(6);
+				String marit = rs.getString(7);
 
-				SerManagerAcc sm = new SerManagerAcc(id, name, address, tel, password, branch, startdate, email);
+				FuelManagerAcc sm = new FuelManagerAcc(id, name, address, tel, password, nic, marit);
 				sman.add(sm);
 
 			}
@@ -79,13 +77,15 @@ public class SerManagerDButil {
 
 	}
 
-	public static boolean updateSerMan(String id, String name, String branch, String tel, String email,String address,String password,String startdate) {
+	public static boolean updateFuelMan(String id, String name, String tel, String address,String password,String nic,String marit) {
 
+			boolean isSuccess = false;
+		
 		try {
 
 			con = DbConnect.getConnection();
 			st = con.createStatement();
-			String sql = "update sermanager set name='" + name + "',tel='" + tel + "',address='" + address + "',branch='"+ branch + "',password='"+password+"',startdate='"+startdate+"',email='"+email+"' where mid='" + id + "'";
+			String sql = "update fuelmanager set name='" + name + "',tel='" + tel + "',address='" + address + "',password='"+password+"',nic='"+nic+"',maritalStatus='"+marit+"' where FID='" + id + "'";
 			int count = st.executeUpdate(sql);
 
 			if (count > 0) {
@@ -104,17 +104,17 @@ public class SerManagerDButil {
 		return isSuccess;
 	}
 	
-	public static List<SerManagerAcc> getSerManDetails(String id) {
+	public static List<FuelManagerAcc> getFuelManDetails(String id) {
 
 		
 
-		ArrayList<SerManagerAcc> manager = new ArrayList<>();
+		ArrayList<FuelManagerAcc> manager = new ArrayList<>();
 
 		try {
 
 			con = DbConnect.getConnection();
 			st = con.createStatement();
-			String sql = "select * from sermanager where mid='" + id + "'";
+			String sql = "select * from fuelmanager where FID='" + id + "'";
 			rs = st.executeQuery(sql);
 
 			while (rs.next()) {
@@ -123,12 +123,11 @@ public class SerManagerDButil {
 				String name = rs.getString(2);
 				String tel = rs.getString(3);
 				String address = rs.getString(4);
-				String branch = rs.getString(5);
-				String password = rs.getString(6);
-				String startdate = rs.getString(7);
-				String email = rs.getString(8);
+				String password = rs.getString(5);
+				String nic = rs.getString(6);
+				String marit = rs.getString(7);
 
-				SerManagerAcc m = new SerManagerAcc(id2, name,address,tel,password,branch,startdate,email);
+				FuelManagerAcc m = new FuelManagerAcc(id2, name, address, tel, password, nic, marit);
 				manager.add(m);
 			}
 
@@ -140,13 +139,13 @@ public class SerManagerDButil {
 		return manager;
 	}
 	
-	public static boolean deleteSerManager(String id) {
+	public static boolean deleteFuelManager(String id) {
 
 		try {
 
 			con = DbConnect.getConnection();
 			st = con.createStatement();
-			String sql = "delete from sermanager where mid='" + id + "'";
+			String sql = "delete from fuelmanager where FID='" + id + "'";
 			int count = st.executeUpdate(sql);
 
 			if (count > 0) {
@@ -164,5 +163,9 @@ public class SerManagerDButil {
 		return isSuccess;
 
 	}
+	
+	
+	
+	
 
 }

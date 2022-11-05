@@ -2,13 +2,13 @@ package com.model;
 
 public class ManagerAcc {
 	
-	private int id;
+	private String id;
 	private String name;
 	private String address;
 	private String tel;
 	private String password;
 	
-	public ManagerAcc(int id, String name, String address, String tel, String password) {
+	public ManagerAcc(String id, String name, String address, String tel, String password) {
 		
 		this.id = id;
 		this.name = name;
@@ -17,7 +17,7 @@ public class ManagerAcc {
 		this.password = password;
 	}
 
-	public int getId() {
+	public String getId() {
 		return id;
 	}
 

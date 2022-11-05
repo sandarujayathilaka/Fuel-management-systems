@@ -28,12 +28,23 @@
         <label class="form-label" for="Address">Address</label>
         <input type="text" name="address" class="form-control" id="Address" placeholder="Eg:Matara,Akuressa">
     </div>
+    
+    <div class="mb-3">
+        <label class="form-label" for="nic">NIC</label>
+        <input type="text" name="nic" class="form-control" id="nic" placeholder="Eg:Matara,Akuressa">
+    </div>
+ 
      <div class="mb-3">
-        <label class="form-label" for="nic">Address</label>
-        <input type="text" name="nic" class="form-control" id="nic" placeholder="NIC">
+        <label class="form-label" for="uname">User Name</label>
+        <input type="text" name="uname" class="form-control" id="uname" placeholder="uname">
     </div>
     
-    <button type="submit" class="btn btn-primary" name="sub">Add Employer</button>
+     <div class="mb-3">
+        <label class="form-label" for="pass">Password</label>
+        <input type="text" name="pass" class="form-control" id="pass" placeholder="NIC">
+    </div>
+    
+    <button type="submit" class="btn btn-primary" name="sub">Add Admin</button>
     </form>
 </div>
 

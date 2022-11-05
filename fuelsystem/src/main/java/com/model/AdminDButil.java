@@ -4,22 +4,22 @@ import java.util.ArrayList;
 import java.util.List;
 import java.sql.*;
 
-public class employerDButil {
+public class AdminDButil {
 
 	private static boolean isSuccess;
 	private static Connection con = null;
 	private static Statement st = null;
 	private static ResultSet rs = null;
 
-	public static List<Employer> validate(int empid) {
+	public static List<Admin> validate(int empid) {
 
-		ArrayList<Employer> emp = new ArrayList<>();
+		ArrayList<Admin> admin = new ArrayList<>();
 
 		try {
 
 			con = DbConnect.getConnection();
 			st = con.createStatement();
-			String sql = "select * from fuelemployer where empid ='" + empid + "'";
+			String sql = "select * from admin where empid ='" + empid + "'";
 			rs = st.executeQuery(sql);
 
 			if (rs.next()) {
@@ -28,9 +28,11 @@ public class employerDButil {
 				String tel = rs.getString(3);
 				String address = rs.getString(4);
 				String nic = rs.getString(5);
+				String uname = rs.getString(6);
+				String pass = rs.getString(7);
 
-				Employer e = new Employer(id, name, address, tel, nic);
-				emp.add(e);
+				Admin e = new Admin(id, name, address, tel, nic,uname,pass);
+				admin.add(e);
 			}
 
 		} catch (Exception e) {
@@ -38,11 +40,11 @@ public class employerDButil {
 			e.printStackTrace();
 		}
 
-		return emp;
+		return admin;
 
 	}
 
-	public static boolean insertEmp(String name, String tel, String address, String nic) {
+	public static boolean insertAdmin(String name, String tel, String address, String nic,String uname,String pass) {
 
 		boolean isSuccess = false;
 
@@ -50,8 +52,8 @@ public class employerDButil {
 
 			con = DbConnect.getConnection();
 			st = con.createStatement();
-			String sql = "insert into fuelemployer values (0,'" + name + "','" + tel + "','" + address + "','" + nic
-					+ "')";
+			String sql = "insert into admin values (0,'" + name + "','" + tel + "','" + address + "','" + nic
+					+ "','"+uname+"','"+pass+"')";
 			int count = st.executeUpdate(sql);
 
 			if (count > 0) {
@@ -71,14 +73,14 @@ public class employerDButil {
 
 	}
 
-	public static boolean updateemp(String id, String name, String tel, String address, String nic) {
+	public static boolean updateAdmin(String id, String name, String tel, String address, String nic,String uname,String pass) {
 
 		try {
 
 			con = DbConnect.getConnection();
 			st = con.createStatement();
-			String sql = "update fuelemployer set name='" + name + "',tel='" + tel + "',address='" + address + "',nic='"
-					+ nic + "' where empid='" + id + "'";
+			String sql = "update admin set name='" + name + "',tel='" + tel + "',address='" + address + "',nic='"
+					+ nic + "',username='"+uname+"',password='"+pass+"' where empid='" + id + "'";
 			int count = st.executeUpdate(sql);
 
 			if (count > 0) {
@@ -97,17 +99,17 @@ public class employerDButil {
 		return isSuccess;
 	}
 
-	public static List<Employer> getEmpDetails(String id) {
+	public static List<Admin> getAdminDetails(String id) {
 
 		int newid = Integer.parseInt(id);
 
-		ArrayList<Employer> emp = new ArrayList<>();
+		ArrayList<Admin> admin = new ArrayList<>();
 
 		try {
 
 			con = DbConnect.getConnection();
 			st = con.createStatement();
-			String sql = "select * from fuelemployer where empid='" + newid + "'";
+			String sql = "select * from admin where empid='" + newid + "'";
 			rs = st.executeQuery(sql);
 
 			while (rs.next()) {
@@ -117,9 +119,11 @@ public class employerDButil {
 				String tel = rs.getString(3);
 				String address = rs.getString(4);
 				String nic = rs.getString(5);
+				String uname = rs.getString(6);
+				String pass = rs.getString(7);
 
-				Employer e = new Employer(id1, name, address, tel, nic);
-				emp.add(e);
+				Admin e = new Admin(id1, name, address, tel, nic,uname,pass);
+				admin.add(e);
 			}
 
 		} catch (Exception e) {
@@ -127,10 +131,10 @@ public class employerDButil {
 			e.printStackTrace();
 		}
 
-		return emp;
+		return admin;
 	}
 
-	public static boolean deleteEmp(String id) {
+	public static boolean deleteadmin(String id) {
 
 		int sqlid = Integer.parseInt(id);
 
@@ -138,7 +142,7 @@ public class employerDButil {
 
 			con = DbConnect.getConnection();
 			st = con.createStatement();
-			String sql = "delete from fuelemployer where empid='" + sqlid + "'";
+			String sql = "delete from admin where empid='" + sqlid + "'";
 			int count = st.executeUpdate(sql);
 
 			if (count > 0) {
@@ -157,15 +161,15 @@ public class employerDButil {
 
 	}
 
-	public static List<Employer> getallemp() {
+	public static List<Admin> getallemp() {
 
-		ArrayList<Employer> emp = new ArrayList<>();
+		ArrayList<Admin> admin = new ArrayList<>();
 
 		try {
 
 			con = DbConnect.getConnection();
 			st = con.createStatement();
-			String sql = "select * from fuelemployer";
+			String sql = "select * from admin";
 			rs = st.executeQuery(sql);
 
 			while (rs.next()) {
@@ -174,18 +178,20 @@ public class employerDButil {
 				String tel = rs.getString(3);
 				String address = rs.getString(4);
 				String nic = rs.getString(5);
+				String uname = rs.getString(6);
+				String pass = rs.getString(7);
 
-				Employer e = new Employer(id, name, address, tel, nic);
-				emp.add(e);
+				Admin e = new Admin(id, name, address, tel, nic,uname,pass);
+				admin.add(e);
 
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 
-		System.out.println("The size of the ArrayList is: " + emp.size());
+		System.out.println("The size of the ArrayList is: " + admin.size());
 
-		return emp;
+		return admin;
 
 	}
 

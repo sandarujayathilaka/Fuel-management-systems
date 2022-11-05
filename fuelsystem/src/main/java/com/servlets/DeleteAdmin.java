@@ -10,12 +10,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.model.Employer;
-import com.model.employerDButil;
+import com.model.Admin;
+import com.model.AdminDButil;
 
 
-@WebServlet("/DeleteEmpServlet")
-public class DeleteEmpServlet extends HttpServlet {
+@WebServlet("/DeleteAdmin")
+public class DeleteAdmin extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 
@@ -23,7 +23,7 @@ public class DeleteEmpServlet extends HttpServlet {
 
 		String id = request.getParameter("id");
 		
-		boolean isTrue = employerDButil.deleteEmp(id);
+		boolean isTrue = AdminDButil.deleteadmin(id);
 		
 		if(isTrue== true) {
 			
@@ -34,10 +34,10 @@ public class DeleteEmpServlet extends HttpServlet {
 		
 		else {
 			
-			List<Employer> empdetails =employerDButil.getEmpDetails(id);
-			request.setAttribute("empdetails", empdetails);
+			List<Admin> adminDetails =AdminDButil.getAdminDetails(id);
+			request.setAttribute("adminDetails", adminDetails);
 			
-			RequestDispatcher dis = request.getRequestDispatcher("empacc.jsp");
+			RequestDispatcher dis = request.getRequestDispatcher("adminacc.jsp");
 			dis.forward(request, response);
 		}
 		

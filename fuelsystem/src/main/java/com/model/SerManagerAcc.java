@@ -1,13 +1,14 @@
 package com.model;
 
-public class SerManagerAcc extends ManagerAcc {
+public class SerManagerAcc extends ManagerAcc{
 
+	
 	private String branch;
 	private String startdate;
 	private String email;
 	
 	
-	public SerManagerAcc(int id, String name, String address, String tel, String password,String branch,String startdate,String email) {
+	public SerManagerAcc(String id, String name, String address, String tel, String password,String branch,String startdate,String email) {
 		
 		super(id, name, address, tel, password);
 		

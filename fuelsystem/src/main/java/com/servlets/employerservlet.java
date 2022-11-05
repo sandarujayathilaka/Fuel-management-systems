@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.model.Employer;
-import com.model.employerDButil;
+import com.model.Admin;
+import com.model.AdminDButil;
 
 @WebServlet("/employerservlet")
 public class employerservlet extends HttpServlet {
@@ -23,10 +23,10 @@ public class employerservlet extends HttpServlet {
 		
 		int empid = Integer.parseInt(request.getParameter("empid")); 
 		
-		employerDButil.validate(empid);
+		AdminDButil.validate(empid);
 		
 		try {
-		List<Employer> empdetails = employerDButil.validate(empid);
+		List<Admin> empdetails = AdminDButil.validate(empid);
 		request.setAttribute("empdetails", empdetails);
 		}catch(Exception e) {
 			e.printStackTrace();

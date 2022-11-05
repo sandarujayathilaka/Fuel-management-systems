@@ -14,44 +14,88 @@
 	</welcome-file-list>
 
 	<servlet>
-		<servlet-name>empdetails</servlet-name>
+		<servlet-name>adminDetails</servlet-name>
 		<servlet-class>com.servlets.employerservlet</servlet-class>
 	</servlet>
+	
+	
+	<servlet-mapping>
+		<servlet-name>adminDetails</servlet-name>
+		<url-pattern>/employerdetails</url-pattern>
+	</servlet-mapping>
 
 	<servlet>
 		<servlet-name>addData</servlet-name>
-		<servlet-class>com.servlets.insertEmpServlet</servlet-class>
+		<servlet-class>com.servlets.InsertAdmin</servlet-class>
 	</servlet>
+	
+		<servlet-mapping>
+		<servlet-name>addData</servlet-name>
+		<url-pattern>/insertdata</url-pattern>
+	</servlet-mapping>
+	
 
 	<servlet>
 		<servlet-name>updateData</servlet-name>
-		<servlet-class>com.servlets.UpdateEmpServlet</servlet-class>
+		<servlet-class>com.servlets.UpdateAdmin</servlet-class>
 	</servlet>
+	
+		<servlet-mapping>
+		<servlet-name>updateData</servlet-name>
+		<url-pattern>/updatedetails</url-pattern>
+	</servlet-mapping>
+	
 
 	<servlet>
 		<servlet-name>deleteData</servlet-name>
-		<servlet-class>com.servlets.DeleteEmpServlet</servlet-class>
+		<servlet-class>com.servlets.DeleteAdmin</servlet-class>
 	</servlet>
+	
+		<servlet-mapping>
+		<servlet-name>deleteData</servlet-name>
+		<url-pattern>/deletedetails</url-pattern>
+	</servlet-mapping>
 
 	<servlet>
-		<servlet-name>allempdata</servlet-name>
-		<servlet-class>com.servlets.EmpAllServlet</servlet-class>
+		<servlet-name>alladmindata</servlet-name>
+		<servlet-class>com.servlets.AdminAll</servlet-class>
 	</servlet>
+	
+		<servlet-mapping>
+		<servlet-name>alladmindata</servlet-name>
+		<url-pattern>/allempdetails</url-pattern>
+	</servlet-mapping>
+	
 
 	<servlet>
 		<servlet-name>addSerManager</servlet-name>
 		<servlet-class>com.servlets.InsertSmanServlet</servlet-class>
 	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>addSerManager</servlet-name>
+		<url-pattern>/insertSmanager</url-pattern>
+	</servlet-mapping>
 
 	<servlet>
 		<servlet-name>fetchSerManager</servlet-name>
 		<servlet-class>com.servlets.SerManAllServlet</servlet-class>
 	</servlet>
 	
+	<servlet-mapping>
+		<servlet-name>fetchSerManager</servlet-name>
+		<url-pattern>/fetchSerMan</url-pattern>
+	</servlet-mapping>
+	
 	<servlet>
 		<servlet-name>UpdateSerManager</servlet-name>
 		<servlet-class>com.servlets.updateManagerServlet</servlet-class>
 	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>UpdateSerManager</servlet-name>
+		<url-pattern>/updateSerManage</url-pattern>
+	</servlet-mapping>
 	
 	<servlet>
 		<servlet-name>deleteSerManager</servlet-name>
@@ -63,50 +107,44 @@
 		<url-pattern>/deleteSerMan</url-pattern>
 	</servlet-mapping>
 	
+	<servlet>
+		<servlet-name>FuelManagerAll</servlet-name>
+		<servlet-class>com.servlets.FuelManagerAll</servlet-class>
+	</servlet>
+	
 	<servlet-mapping>
-		<servlet-name>UpdateSerManager</servlet-name>
-		<url-pattern>/updateSerManage</url-pattern>
+		<servlet-name>FuelManagerAll</servlet-name>
+		<url-pattern>/FuelManAllServlet</url-pattern>
 	</servlet-mapping>
-
+	
+	<servlet>
+		<servlet-name>FuelManUpdate</servlet-name>
+		<servlet-class>com.servlets.UpdateFuelMan</servlet-class>
+	</servlet>
+	
 	<servlet-mapping>
-		<servlet-name>fetchSerManager</servlet-name>
-		<url-pattern>/fetchSerMan</url-pattern>
-
+		<servlet-name>FuelManUpdate</servlet-name>
+		<url-pattern>/UpdateFuelMDetails</url-pattern>
 	</servlet-mapping>
-
-
+	
+	<servlet>
+		<servlet-name>addfuelman</servlet-name>
+		<servlet-class>com.servlets.insertFuelMan</servlet-class>
+	</servlet>
+	
 	<servlet-mapping>
-		<servlet-name>addSerManager</servlet-name>
-		<url-pattern>/insertSmanager</url-pattern>
+		<servlet-name>addfuelman</servlet-name>
+		<url-pattern>/addFmanager</url-pattern>
 	</servlet-mapping>
-
+	
+	<servlet>
+		<servlet-name>deletefuelman</servlet-name>
+		<servlet-class>com.servlets.deleteFuelMan</servlet-class>
+	</servlet>
+	
 	<servlet-mapping>
-		<servlet-name>deleteData</servlet-name>
-		<url-pattern>/deletedetails</url-pattern>
+		<servlet-name>deletefuelman</servlet-name>
+		<url-pattern>/deleteFMan</url-pattern>
 	</servlet-mapping>
-
-
-	<servlet-mapping>
-		<servlet-name>allempdata</servlet-name>
-		<url-pattern>/allempdetails</url-pattern>
-	</servlet-mapping>
-
-	<servlet-mapping>
-		<servlet-name>updateData</servlet-name>
-		<url-pattern>/updatedetails</url-pattern>
-	</servlet-mapping>
-
-	<servlet-mapping>
-		<servlet-name>addData</servlet-name>
-		<url-pattern>/insertdata</url-pattern>
-	</servlet-mapping>
-
-	<servlet-mapping>
-		<servlet-name>empdetails</servlet-name>
-		<url-pattern>/employerdetails</url-pattern>
-	</servlet-mapping>
-
-
-
-
+	
 </web-app>

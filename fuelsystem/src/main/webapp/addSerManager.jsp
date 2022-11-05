@@ -11,7 +11,12 @@
 
 <div class="container p-5 my-5 bg-dark text-white">
 
-	<form method = "post" action="insertSmanager">
+	<form method = "post" action="insertSmanager" name="manadd" onsubmit="return validateform()">
+	
+	 <div class="mb-3">
+        <label class="form-label" for="inputid" >MID</label>
+        <input type="text" name="id" class="form-control" id="id" placeholder="SER0000">
+    </div>
 
     <div class="mb-3">
         <label class="form-label" for="inputname" >Name</label>
@@ -54,5 +59,21 @@
 </div>
 
 </body>
+
+<script>  
+function validateform(){  
+var name=document.manadd.name.value;  
+var password=document.manadd.password.value;  
+  
+if (name==null || name==""){  
+  alert("Name can't be blank");  
+  return false;  
+}else if(password.length<5){  
+  alert("Password must be at least 5 characters long.");  
+  return false;  
+  }  
+}  
+</script>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
 </html>

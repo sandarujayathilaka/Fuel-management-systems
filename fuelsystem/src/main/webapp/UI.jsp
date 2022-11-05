@@ -27,9 +27,9 @@
 
 <ul>
      <li class="list"><a href="#"><img id="img1" src="Asserts/12.png"> Dashboard</a></li>                             
-     <li class="list"><a href="EmpAllServlet"><img id="img1" src="Asserts/admin.png"> FuelEmployer</a></li>
+     <li class="list"><a href="allempdetails"><img id="img1" src="Asserts/admin.png"> Admin</a></li>
      <li class="list"><a href="SerManAllServlet"><img id="img1" src="Asserts/user.png">Service Manager</a></li>
-     <li class="list"><a href=".#"><img id="img1" src="Asserts/user.png"> Fuel Manager</a></li>
+     <li class="list"><a href="FuelManAllServlet"><img id="img1" src="Asserts/user.png"> Fuel Manager</a></li>
      <li class="list"><a href="#"><img id="img1" src="Asserts/contact.png"> Calculator</a></li>
      
 

@@ -16,7 +16,8 @@
 	String address=request.getParameter("address");
 	String tel=request.getParameter("tel");
 	String nic=request.getParameter("nic");
-
+	String uname=request.getParameter("uname");
+	String pass=request.getParameter("pass");
 %>
 
 <div class="container p-5 my-5 bg-dark text-white">
@@ -45,6 +46,16 @@
      <div class="mb-3">
         <label class="form-label" for="nic">NIC</label>
         <input type="text" name="nic" class="form-control" id="nic" value="<%=nic%>" placeholder="NIC">
+    </div>
+    
+    <div class="mb-3">
+        <label class="form-label" for="uname">User Name</label>
+        <input type="text" name="uname" class="form-control" id="uname" value="<%=uname%>" placeholder="uname">
+    </div>
+    
+     <div class="mb-3">
+        <label class="form-label" for="pass">Password</label>
+        <input type="text" name="pass" class="form-control" id="pass" value="<%=pass%>" placeholder="NIC">
     </div>
     
     <button type="submit" class="btn btn-primary" name="sub">Update Details</button>
