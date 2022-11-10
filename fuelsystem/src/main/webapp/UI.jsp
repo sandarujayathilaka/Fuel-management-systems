@@ -30,7 +30,9 @@
      <li class="list"><a href="allempdetails"><img id="img1" src="Asserts/admin.png"> Admin</a></li>
      <li class="list"><a href="SerManAllServlet"><img id="img1" src="Asserts/user.png">Service Manager</a></li>
      <li class="list"><a href="FuelManAllServlet"><img id="img1" src="Asserts/user.png"> Fuel Manager</a></li>
-     <li class="list"><a href="#"><img id="img1" src="Asserts/contact.png"> Calculator</a></li>
+     <li class="list"><a href="DieselFuelData"><img id="img1" src="Asserts/contact.png"> Diesel Info</a></li>
+     <li class="list"><a href="petrolAllData"><img id="img1" src="Asserts/contact.png"> Petrol Info</a></li>
+     <li class="list"><a href="addFuel.jsp"><img id="img1" src="Asserts/contact.png"> Add Fuel Data</a></li>
      
 
 </ul>

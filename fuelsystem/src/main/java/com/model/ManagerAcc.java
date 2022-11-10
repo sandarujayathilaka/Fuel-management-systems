@@ -2,11 +2,11 @@ package com.model;
 
 public class ManagerAcc {
 	
-	private String id;
-	private String name;
-	private String address;
-	private String tel;
-	private String password;
+	protected String id;
+	protected String name;
+	protected String address;
+	protected String tel;
+	protected String password;
 	
 	public ManagerAcc(String id, String name, String address, String tel, String password) {
 		

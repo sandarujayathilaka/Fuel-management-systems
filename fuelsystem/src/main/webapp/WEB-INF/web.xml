@@ -147,4 +147,96 @@
 		<url-pattern>/deleteFMan</url-pattern>
 	</servlet-mapping>
 	
+	<servlet>
+		<servlet-name>insertResourse</servlet-name>
+		<servlet-class>com.servlets.addFuel</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>insertResourse</servlet-name>
+		<url-pattern>/addFueldata</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>DieselProfitData</servlet-name>
+		<servlet-class>com.servlets.AllDieselData</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>DieselProfitData</servlet-name>
+		<url-pattern>/DieselFuelData</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>petrolAllData</servlet-name>
+		<servlet-class>com.servlets.AllPetrolData</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>petrolAllData</servlet-name>
+		<url-pattern>/petrolAllData</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>UpdateDiesel</servlet-name>
+		<servlet-class>com.servlets.UpdateDiesel</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>UpdateDiesel</servlet-name>
+		<url-pattern>/updateDiesel</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>DeleteDiesel</servlet-name>
+		<servlet-class>com.servlets.DeleteDiesel</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>DeleteDiesel</servlet-name>
+		<url-pattern>/deleteDiesel</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>calDiesel</servlet-name>
+		<servlet-class>com.servlets.CalculateSev</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>calDiesel</servlet-name>
+		<url-pattern>/calDiesel</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>UpdatePetrol</servlet-name>
+		<servlet-class>com.servlets.UpdatePetrol</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>UpdatePetrol</servlet-name>
+		<url-pattern>/updatePetrol</url-pattern>
+	</servlet-mapping>
+	
+		<servlet>
+		<servlet-name>DeletePetrol</servlet-name>
+		<servlet-class>com.servlets.DeletePetrol</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>DeletePetrol</servlet-name>
+		<url-pattern>/deletePetrol</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>CalPetrol</servlet-name>
+		<servlet-class>com.servlets.CalPetrol</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>CalPetrol</servlet-name>
+		<url-pattern>/calPetrol</url-pattern>
+	</servlet-mapping>
+	
+	
 </web-app>
