@@ -29,7 +29,11 @@ public class SerManAllServlet extends HttpServlet {
 		request.setAttribute("serMdetails", serMdetails);
 		
 		}catch(Exception e) {
+			
 			e.printStackTrace();
+			RequestDispatcher dis = request.getRequestDispatcher("notcompleted.jsp");
+			dis.forward(request, response);	
+			
 		}
 		
 		RequestDispatcher dis = request.getRequestDispatcher("managerall.jsp");
@@ -47,6 +51,9 @@ public class SerManAllServlet extends HttpServlet {
 		
 		}catch(Exception e) {
 			e.printStackTrace();
+			RequestDispatcher dis = request.getRequestDispatcher("notcompleted.jsp");
+			dis.forward(request, response);	
+			
 		}
 		
 		RequestDispatcher dis = request.getRequestDispatcher("managerall.jsp");

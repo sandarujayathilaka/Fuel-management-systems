@@ -41,6 +41,8 @@ public class DeletePetrol extends HttpServlet {
 
 			} catch (Exception e) {
 				e.printStackTrace();
+				RequestDispatcher dis = request.getRequestDispatcher("notcompleted.jsp");
+				dis.forward(request, response);	
 			}
 
 			RequestDispatcher dis = request.getRequestDispatcher("AllPetrolData.jsp");

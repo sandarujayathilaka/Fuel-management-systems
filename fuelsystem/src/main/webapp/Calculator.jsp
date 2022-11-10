@@ -5,16 +5,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="UI.css">
+<link rel="stylesheet" href="Asserts/Css/UI.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Calculate</title>
 </head>
 <body>
 
 <div class ="profit">	
-<h3>Profit : Rs.${profit}</h3>
-<h3>Sold Liters : ${sold}</h3>
+<h1 id="topic1">Profit :</h1><h2 class="topic3">Rs.${profit}</h2>
+<h1 id="topic2">Sold Liters :</h1><h2 class="topic3">${sold}</h2>
 </div>	
 
 

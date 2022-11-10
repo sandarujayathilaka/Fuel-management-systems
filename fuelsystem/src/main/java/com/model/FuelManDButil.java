@@ -71,8 +71,6 @@ public class FuelManDButil {
 			e.printStackTrace();
 		}
 
-		System.out.println("The size of the ArrayList is: " + sman.size());
-
 		return sman;
 
 	}

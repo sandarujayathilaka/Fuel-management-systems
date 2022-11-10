@@ -1,7 +1,7 @@
 package com.servlets;
 
 import java.io.IOException;
-import java.util.List;
+
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.model.Admin;
+
 import com.model.AdminDButil;
 
 
@@ -34,11 +34,8 @@ public class DeleteAdmin extends HttpServlet {
 		
 		else {
 			
-			List<Admin> adminDetails =AdminDButil.getAdminDetails(id);
-			request.setAttribute("adminDetails", adminDetails);
-			
-			RequestDispatcher dis = request.getRequestDispatcher("adminacc.jsp");
-			dis.forward(request, response);
+			RequestDispatcher dis = request.getRequestDispatcher("notcompleted.jsp");
+			dis.forward(request, response);	
 		}
 		
 		

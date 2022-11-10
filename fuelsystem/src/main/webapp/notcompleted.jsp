@@ -4,9 +4,11 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<link rel="stylesheet" href="Asserts/Css/error.css">
+<title>Error</title>
 </head>
 <body>
-<h1>Not completed</h1>
+<h1> Oops!</h1>
+<p>Something went wrong<p>
 </body>
 </html>

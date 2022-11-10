@@ -5,7 +5,7 @@
 <head>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Update admin</title>
 </head>
 <body>
 
@@ -55,7 +55,7 @@
     
      <div class="mb-3">
         <label class="form-label" for="pass">Password</label>
-        <input type="text" name="pass" class="form-control" id="pass" value="<%=pass%>" placeholder="NIC">
+        <input type="text" name="pass" class="form-control" id="pass" value="<%=pass%>" placeholder="password">
     </div>
     
     <button type="submit" class="btn btn-primary" name="sub">Update Details</button>

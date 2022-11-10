@@ -5,7 +5,7 @@
 <head>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Delete Admin</title>
 </head>
 <body>
 
@@ -30,21 +30,21 @@
 
     <div class="mb-3">
         <label class="form-label" for="inputname" >Name</label>
-        <input type="text" name="name" class="form-control" id="inputname" value="<%=name%>" readonly placeholder="Eg:P.K.D.Perera">
+        <input type="text" name="name" class="form-control" id="inputname" value="<%=name%>" readonly >
     </div>
     
     <div class="mb-3">
         <label class="form-label" for="tel">Mobile Number</label>
-        <input type="text" name="tel" class="form-control" id="tel" value="<%=tel%>" readonly placeholder="Eg:077xxxxxxx">
+        <input type="text" name="tel" class="form-control" id="tel" value="<%=tel%>" readonly>
     </div>
     
      <div class="mb-3">
         <label class="form-label" for="Address">Address</label>
-        <input type="text" name="address" class="form-control" id="Address" value="<%=address%>" readonly placeholder="Eg:Matara,Akuressa">
+        <input type="text" name="address" class="form-control" id="Address" value="<%=address%>" readonly>
     </div>
      <div class="mb-3">
         <label class="form-label" for="nic">Address</label>
-        <input type="text" name="nic" class="form-control" id="nic" value="<%=nic%>" readonly placeholder="NIC">
+        <input type="text" name="nic" class="form-control" id="nic" value="<%=nic%>" readonly>
     </div>
     
     <button type="submit" class="btn btn-primary " name="sub">Delete User</button>

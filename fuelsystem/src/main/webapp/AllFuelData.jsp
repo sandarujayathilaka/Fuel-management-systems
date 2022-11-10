@@ -7,11 +7,11 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>All Fuel Data</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" />
 </head>
 <body>
-<a id="new_recipe_btn" href="addFuelMan.jsp">Add Data</a>
+
 	<table class="admintable">
 		<thead>
 			<tr>

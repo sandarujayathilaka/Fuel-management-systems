@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Add fuel</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
- <link rel="stylesheet" href="./form.css">
+ <link rel="stylesheet" href="Asserts/Css/form.css">
 </head>
 <body>
 
@@ -26,50 +26,49 @@
 
 			<div class="mb-3">
 				<label class="form-label" for="date">Date</label> <input
-					type="date" name="date" class="form-control" id="date"
-					placeholder="SER0000">
+					type="date" name="date" class="form-control" id="date">
 			</div>
 
 			<div class="mb-3">
 				<label class="form-label" for="inputname">Transport cost</label> <input
 					type="number" step=0.01 name="tcost" class="form-control" id="tcost"
-					placeholder="Eg:P.K.D.Perera">
+					placeholder="500.0">
 			</div>
 
 			<div class="mb-3">
 				<label class="form-label" for="tax">Tax</label> <input
 					type="number" step=0.01 name="tax" class="form-control" id="tax"
-					placeholder="Eg:077xxxxxxx">
+					placeholder="1000.0">
 			</div>
 
 			<div class="mb-3">
 				<label class="form-label" for="Address">dispenser Maintain Cost</label> <input
 					type="number" step=0.01 name="dispenser" class="form-control" id="dispenser"
-					placeholder="Eg:Matara,Akuressa">
+					placeholder="5000.0">
 			</div>
 
 			<div class="mb-3">
-				<label class="form-label" for="pass">Initial Quantity</label> <input
+				<label class="form-label" for="pass">Initial Quantity(liter)</label> <input
 					type="number" step=0.01 name="initqun" class="form-control" id="initqun"
-					placeholder="Hint">
+					placeholder="50000.0">
 			</div>
 
 			<div class="mb-3">
 				<label class="form-label" for="inputname">Day Price</label> <input
 					type="number" step=0.01 name="dprice" class="form-control" id="dprice"
-					placeholder="Eg:P.K.D.Perera">
+					placeholder="147.50">
 			</div>
 			
 			<div class="mb-3">
-				<label class="form-label" for="inputname">Rest Quantity</label> <input
+				<label class="form-label" for="inputname">Rest Quantity(liter)</label> <input
 					type="number" step=0.01 name="rqun" class="form-control" id="rqun"
-					placeholder="Eg:P.K.D.Perera">
+					placeholder="600.0">
 			</div>
 			
 			<div class="mb-3">
-				<label class="form-label" for="inputname">Profit Share</label> <input
+				<label class="form-label" for="inputname">Profit Share(percentage)</label> <input
 					type="number" step=0.01 name="share" class="form-control" id="share"
-					placeholder="Eg:P.K.D.Perera">
+					placeholder="5">
 			</div>
 			<br>
 

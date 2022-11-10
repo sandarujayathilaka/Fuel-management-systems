@@ -30,6 +30,8 @@ public class employerservlet extends HttpServlet {
 		request.setAttribute("empdetails", empdetails);
 		}catch(Exception e) {
 			e.printStackTrace();
+			RequestDispatcher dis = request.getRequestDispatcher("notcompleted.jsp");
+			dis.forward(request, response);	
 		}
 		
 		RequestDispatcher dis = request.getRequestDispatcher("empacc.jsp");

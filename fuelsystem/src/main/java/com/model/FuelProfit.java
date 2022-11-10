@@ -1,6 +1,6 @@
 package com.model;
 
-public class FuelProfit implements ProfitInterface {
+public class FuelProfit {
 	
 	protected double transportCost;
 	protected String id;
@@ -30,20 +30,6 @@ public class FuelProfit implements ProfitInterface {
 		this.restQuantity = restQuantity;
 		this.profitShare = profitShare;
 	}
-
-
-	public double calprofit() {
-		return 0;
-	}
-	
-	
-	public double soldPetroleumValue() {
-		
-		double sold = this.initialQuantity - this.restQuantity;
-		return sold;
-		
-	}
-	
 
 
 	public double getTransportCost() {

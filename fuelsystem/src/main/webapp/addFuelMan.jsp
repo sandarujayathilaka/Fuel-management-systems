@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Add fuel manager</title>
 <link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" />
 </head>
@@ -18,7 +18,7 @@
 			<div class="mb-3">
 				<label class="form-label" for="inputid">FID</label> <input
 					type="text" name="id" class="form-control" id="id"
-					placeholder="SER0000">
+					placeholder="FID0000">
 			</div>
 
 			<div class="mb-3">
@@ -42,13 +42,13 @@
 			<div class="mb-3">
 				<label class="form-label" for="pass">Password</label> <input
 					type="password" name="password" class="form-control" id="pass"
-					placeholder="Hint">
+					placeholder="password">
 			</div>
 
 			<div class="mb-3">
 				<label class="form-label" for="inputname">NIC</label> <input
 					type="text" name="nic" class="form-control" id="inputname"
-					placeholder="Eg:P.K.D.Perera">
+					placeholder="19983366985">
 			</div>
 			
 			<div class="mb-3">

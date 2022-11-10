@@ -27,9 +27,11 @@ public class AllDieselData extends HttpServlet {
 			List<Diesel> dieselData = ResourseDBUtill.getDieselData();
 			request.setAttribute("dieselData",dieselData);
 			
-			
 			}catch(Exception e) {
 				e.printStackTrace();
+				
+				RequestDispatcher dis = request.getRequestDispatcher("notcompleted.jsp");
+				dis.forward(request, response);
 			}
 			
 			RequestDispatcher dis = request.getRequestDispatcher("AllFuelData.jsp");
@@ -38,7 +40,6 @@ public class AllDieselData extends HttpServlet {
 			
 		
 	}
-
 
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -53,6 +54,8 @@ public class AllDieselData extends HttpServlet {
 			
 			}catch(Exception e) {
 				e.printStackTrace();
+				RequestDispatcher dis = request.getRequestDispatcher("notcompleted.jsp");
+				dis.forward(request, response);
 			}
 			
 			RequestDispatcher dis = request.getRequestDispatcher("AllFuelData.jsp");

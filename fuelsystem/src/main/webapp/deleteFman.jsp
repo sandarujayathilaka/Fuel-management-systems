@@ -5,7 +5,7 @@
 <head>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" />
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Delete manager</title>
 </head>
 <body>
 
@@ -33,29 +33,29 @@
 
     <div class="mb-3">
         <label class="form-label" for="inputname" >Name</label>
-        <input type="text" name="name" class="form-control" id="inputname" value="<%=name%>" placeholder="Eg:P.K.D.Perera">
+        <input type="text" name="name" class="form-control" id="inputname" value="<%=name%>" readonly>
     </div>
     
     <div class="mb-3">
         <label class="form-label" for="branch">NIC</label>
-        <input type="text" name="nic" class="form-control" id="nic" value="<%=nic%>" placeholder="Eg:077xxxxxxx">
+        <input type="text" name="nic" class="form-control" id="nic" value="<%=nic%>" readonly>
     </div>
     
      <div class="mb-3">
         <label class="form-label" for="tel">Contact</label>
-        <input type="text" name="tel" class="form-control" id="tel" value="<%=tel%>" placeholder="Eg:Matara,Akuressa">
+        <input type="text" name="tel" class="form-control" id="tel" value="<%=tel%>" readonly>
     </div>
      <div class="mb-3">
         <label class="form-label" for="email">Status</label>
-        <input type="text" name="marit" class="form-control" id="marit" value="<%=marit%>" placeholder="NIC">
+        <input type="text" name="marit" class="form-control" id="marit" value="<%=marit%>" readonly>
     </div>
     <div class="mb-3">
         <label class="form-label" for="pass">password</label>
-        <input type="password" name="password" class="form-control" id="pass" value="<%=password%>" placeholder="NIC">
+        <input type="password" name="password" class="form-control" id="pass" value="<%=password%>" readonly>
     </div>
     <div class="mb-3">
         <label class="form-label" for="add">address</label>
-        <input type="text" name="address" class="form-control" id="add" value="<%=address%>" placeholder="NIC">
+        <input type="text" name="address" class="form-control" id="add" value="<%=address%>" readonly>
     </div>
     
     

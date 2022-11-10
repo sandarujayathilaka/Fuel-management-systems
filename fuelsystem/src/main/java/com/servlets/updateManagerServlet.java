@@ -44,9 +44,6 @@ public class updateManagerServlet extends HttpServlet {
 		
 		else {
 			
-			List<SerManagerAcc> serMdetails = SerManagerDButil.getSerManDetails(id);
-			request.setAttribute("serMdetails", serMdetails);
-			
 			
 			RequestDispatcher dis = request.getRequestDispatcher("notcompleted.jsp");
 			dis.forward(request, response);

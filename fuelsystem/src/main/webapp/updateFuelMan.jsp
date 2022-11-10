@@ -6,7 +6,7 @@
 <link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" />
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Update fuel Man</title>
 </head>
 <body>
 
@@ -48,18 +48,18 @@
 			<div class="mb-3">
 				<label class="form-label" for="tel">Contact</label> <input
 					type="text" name="tel" class="form-control" id="tel"
-					value="<%=tel%>" placeholder="Eg:Matara,Akuressa">
+					value="<%=tel%>" >
 			</div>
 
 			<div class="mb-3">
 				<label class="form-label" for="pass">password</label> <input
 					type="password" name="password" class="form-control" id="pass"
-					value="<%=password%>" placeholder="NIC">
+					value="<%=password%>" >
 			</div>
 			<div class="mb-3">
 				<label class="form-label" for="add">address</label> <input
 					type="text" name="address" class="form-control" id="add"
-					value="<%=address%>" placeholder="NIC">
+					value="<%=address%>" >
 			</div>
 
 			<div class="mb-3">

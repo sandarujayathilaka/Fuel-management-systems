@@ -44,11 +44,9 @@ public class UpdateAdmin extends HttpServlet {
 		
 		else {
 			
-			List<Admin> adminDetails =AdminDButil.getAdminDetails(id);
-			request.setAttribute("adminDetails", adminDetails);
+			RequestDispatcher dis = request.getRequestDispatcher("notcompleted.jsp");
+			dis.forward(request, response);	
 			
-			RequestDispatcher dis = request.getRequestDispatcher("adminAllDetails.jsp");
-			dis.forward(request, response);
 		}
 		
 		

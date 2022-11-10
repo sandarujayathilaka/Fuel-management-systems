@@ -43,6 +43,9 @@ public class UpdateDiesel extends HttpServlet {
 				
 				}catch(Exception e) {
 					e.printStackTrace();
+					RequestDispatcher dis = request.getRequestDispatcher("notcompleted.jsp");
+					dis.forward(request, response);	
+					
 				}
 				
 				RequestDispatcher dis = request.getRequestDispatcher("AllFuelData.jsp");
@@ -54,8 +57,9 @@ public class UpdateDiesel extends HttpServlet {
 		else {
 			
 			
-			RequestDispatcher dis = request.getRequestDispatcher("adminAllDetails.jsp");
-			dis.forward(request, response);
+			RequestDispatcher dis = request.getRequestDispatcher("notcompleted.jsp");
+			dis.forward(request, response);	
+			
 		}
 		
 		

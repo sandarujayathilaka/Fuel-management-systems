@@ -9,6 +9,12 @@
 <title>Admin Dashboard</title>
 </head>
 <body>
+
+<div class="dash">
+<h1 >Welcome to Admin Dashboard </h1>
+<img id="logo1" src="Asserts/images/Last.png">
+</div>
+
  <nav>
  
  <div id="logbtn">

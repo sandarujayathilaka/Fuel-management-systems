@@ -1,6 +1,6 @@
 package com.model;
 
-public class Diesel extends FuelProfit {
+public class Diesel extends FuelProfit implements ProfitInterface {
 
 	public Diesel(String id,String date,double transportCost, double tax, double dispenserMaintainCost, double initialQuantity,
 			double dayPrice, double restQuantity,double profitShare) {
@@ -21,6 +21,12 @@ public class Diesel extends FuelProfit {
 		return profit;
 	}
 	
+	public double soldPetroleumValue() {
+		
+		double sold = this.initialQuantity - this.restQuantity;
+		return sold;
+		
+	}
 	
 	
 }

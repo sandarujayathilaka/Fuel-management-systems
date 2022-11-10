@@ -57,8 +57,9 @@ public class UpdatePetrol extends HttpServlet {
 		else {
 			
 			
-			RequestDispatcher dis = request.getRequestDispatcher("adminAllDetails.jsp");
-			dis.forward(request, response);
+			RequestDispatcher dis = request.getRequestDispatcher("notcompleted.jsp");
+			dis.forward(request, response);	
+			
 		}
 		
 		

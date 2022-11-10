@@ -48,10 +48,6 @@ public class UpdateFuelMan extends HttpServlet {
 		
 		else {
 			
-			List<FuelManagerAcc> serMdetails = FuelManDButil.getFuelManDetails(id);
-			request.setAttribute("serMdetails", serMdetails);
-			
-			
 			RequestDispatcher dis = request.getRequestDispatcher("notcompleted.jsp");
 			dis.forward(request, response);
 		}

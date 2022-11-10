@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
 import com.model.ResourseDBUtill;
 import com.model.Petrol;
 
@@ -18,31 +17,42 @@ import com.model.Petrol;
 public class AllPetrolData extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 
 		try {
-			
+
 			List<Petrol> petrolData = ResourseDBUtill.getPetrolData();
-			request.setAttribute("petrolData",petrolData);
-			
-			
-			}catch(Exception e) {
-				e.printStackTrace();
-			}
-			
-			RequestDispatcher dis = request.getRequestDispatcher("AllPetrolData.jsp");
+			request.setAttribute("petrolData", petrolData);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			RequestDispatcher dis = request.getRequestDispatcher("notcompleted.jsp");
 			dis.forward(request, response);
-		
-		
-		
+		}
+
+		RequestDispatcher dis = request.getRequestDispatcher("AllPetrolData.jsp");
+		dis.forward(request, response);
+
 	}
 
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 
-	
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	
+		try {
+
+			List<Petrol> petrolData = ResourseDBUtill.getPetrolData();
+			request.setAttribute("petrolData", petrolData);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			RequestDispatcher dis = request.getRequestDispatcher("notcompleted.jsp");
+			dis.forward(request, response);
+		}
+
+		RequestDispatcher dis = request.getRequestDispatcher("AllPetrolData.jsp");
+		dis.forward(request, response);
+
 	}
 
 }
