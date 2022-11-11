@@ -13,6 +13,7 @@ public class SerManagerDButil {
 	private static Statement st = null;
 	private static ResultSet rs = null;
 	
+	//add a service manager to the db
 	public static boolean insertSmanager(String id,String name, String tel, String address, String branch, String password,
 			String date, String email) {
 
@@ -43,6 +44,7 @@ public class SerManagerDButil {
 
 	}
 
+	//get service manager all details from db
 	public static List<SerManagerAcc> getSerManDetails() {
 
 		ArrayList<SerManagerAcc> sman = new ArrayList<>();
@@ -79,6 +81,7 @@ public class SerManagerDButil {
 
 	}
 
+	//update the ser manager details
 	public static boolean updateSerMan(String id, String name, String branch, String tel, String email,String address,String password,String startdate) {
 
 		try {
@@ -104,6 +107,7 @@ public class SerManagerDButil {
 		return isSuccess;
 	}
 	
+	//get service manager details by using id
 	public static List<SerManagerAcc> getSerManDetails(String id) {
 
 		
@@ -140,6 +144,7 @@ public class SerManagerDButil {
 		return manager;
 	}
 	
+	//delete the service manager using id
 	public static boolean deleteSerManager(String id) {
 
 		try {

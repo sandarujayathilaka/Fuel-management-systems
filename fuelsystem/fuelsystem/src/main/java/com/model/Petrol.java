@@ -2,6 +2,7 @@ package com.model;
 
 public class Petrol extends FuelProfit implements ProfitInterface {
 	
+	//default constructor
     public Petrol() {
     	
     	id = "NULL";
@@ -15,9 +16,10 @@ public class Petrol extends FuelProfit implements ProfitInterface {
 		
 	}
 	
+	//calculate the petrol profit
 	public double calprofit() {
 		
-		double soldpet = soldPetroleumValue();
+		double soldpet = soldPetroleumValue(); //get the sold petrol value
 		//calculate the profit
 		double profit = (soldpet * this.dayPrice)*(this.profitShare/100) - (this.transportCost+this.tax+this.dispenserMaintainCost);
 		
@@ -30,6 +32,7 @@ public class Petrol extends FuelProfit implements ProfitInterface {
 	}
 	
 	
+	//calculate the sold petrol value
 	public double soldPetroleumValue() {
 		
 		double sold = this.initialQuantity - (this.restQuantity+2000); //2000 is addtitional fixed sold fuel quntity for emegency services

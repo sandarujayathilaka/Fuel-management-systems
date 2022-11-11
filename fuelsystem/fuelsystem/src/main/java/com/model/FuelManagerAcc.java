@@ -14,10 +14,12 @@ public class FuelManagerAcc extends ManagerAcc {
 		
 	}
 
+	//get the fuel manager NIC
 	public String getNic() {
 		return nic;
 	}
 
+	//get the maritial status
 	public String getMaritStataus() {
 		return maritStataus;
 	}

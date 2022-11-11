@@ -29,7 +29,7 @@ public class DeleteSerManager extends HttpServlet {
 
 		if (isTrue == true) {
 
-			RequestDispatcher dis = request.getRequestDispatcher("fetchSerMan");
+			RequestDispatcher dis = request.getRequestDispatcher("fetchSerMan");//redirect to SerManAllServlet servlet
 			dis.forward(request, response);
 
 		}

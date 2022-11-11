@@ -13,6 +13,8 @@ public class FuelManDButil {
 	private static Statement st = null;
 	private static ResultSet rs = null;
 	
+	//insert a fuel manager to db
+	
 	public static boolean insertFuelmanager(String id,String name, String tel, String address, String password,
 			String nic, String marit) {
 
@@ -42,6 +44,9 @@ public class FuelManDButil {
 
 	}
 
+	
+	//get all fuel manager details from db
+	
 	public static List<FuelManagerAcc> getFuelManDetails() {
 
 		ArrayList<FuelManagerAcc> sman = new ArrayList<>();
@@ -74,6 +79,8 @@ public class FuelManDButil {
 		return sman;
 
 	}
+	
+	//update the fuel manager details
 
 	public static boolean updateFuelMan(String id, String name, String tel, String address,String password,String nic,String marit) {
 
@@ -101,6 +108,9 @@ public class FuelManDButil {
 
 		return isSuccess;
 	}
+	
+	
+	// get fuel manager details by using id
 	
 	public static List<FuelManagerAcc> getFuelManDetails(String id) {
 
@@ -136,6 +146,9 @@ public class FuelManDButil {
 
 		return manager;
 	}
+	
+	
+	//delete the fuel manager by using id
 	
 	public static boolean deleteFuelManager(String id) {
 

@@ -37,7 +37,7 @@ public class updateManagerServlet extends HttpServlet {
 			List<SerManagerAcc> serMdetails = SerManagerDButil.getSerManDetails(id);
 			request.setAttribute("serMdetails", serMdetails);
 			
-			RequestDispatcher dis = request.getRequestDispatcher("fetchSerMan");
+			RequestDispatcher dis = request.getRequestDispatcher("fetchSerMan"); //redirect to SerManAllServlet
 			dis.forward(request, response);
 			
 		}

@@ -27,7 +27,7 @@ public class DeleteAdmin extends HttpServlet {
 		
 		if(isTrue== true) {
 			
-			RequestDispatcher dis = request.getRequestDispatcher("allempdetails");
+			RequestDispatcher dis = request.getRequestDispatcher("allempdetails");//redirect to AdminAll
 			dis.forward(request, response);
 			
 		}

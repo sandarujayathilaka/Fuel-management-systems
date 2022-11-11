@@ -42,7 +42,7 @@ public class addFuel extends HttpServlet {
 			boolean isTrue = ResourseDBUtill.insertSuperDieselData(cate,date, tcost, tax, dispenser, initqun, dprice, rqun, share);
 			
 			if(isTrue ==true) {
-				RequestDispatcher dis = request.getRequestDispatcher("DieselFuelData");
+				RequestDispatcher dis = request.getRequestDispatcher("DieselFuelData");//redirect to AllDieselData
 				dis.forward(request, response);		
 			}
 			

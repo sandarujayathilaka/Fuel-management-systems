@@ -31,7 +31,7 @@ public class InsertSmanServlet extends HttpServlet {
 	boolean isTrue = SerManagerDButil.insertSmanager(id,name, tel, address,branch,password,date,email);
 		
 		if(isTrue ==true) {
-			RequestDispatcher dis = request.getRequestDispatcher("fetchSerMan");
+			RequestDispatcher dis = request.getRequestDispatcher("fetchSerMan"); //redirect to SerManAllServlet
 			dis.forward(request, response);		
 		}
 		

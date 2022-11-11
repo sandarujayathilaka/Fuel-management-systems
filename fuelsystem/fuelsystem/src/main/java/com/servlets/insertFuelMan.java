@@ -33,7 +33,7 @@ public class insertFuelMan extends HttpServlet {
 	boolean isTrue = FuelManDButil.insertFuelmanager(id,name, tel, address,password,nic,marit);
 		
 		if(isTrue ==true) {
-			RequestDispatcher dis = request.getRequestDispatcher("FuelManAllServlet");
+			RequestDispatcher dis = request.getRequestDispatcher("FuelManAllServlet");//redirect to FuelManagerAll servlet
 			dis.forward(request, response);		
 		}
 		

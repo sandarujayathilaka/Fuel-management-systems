@@ -11,9 +11,9 @@ public class AdminDButil {
 	private static Statement st = null;
 	private static ResultSet rs = null;
 
-	public static List<Admin> validate(int empid) {
+	public static List<Admin> validate(int empid) { //get the admin data by empid
 
-		ArrayList<Admin> admin = new ArrayList<>();
+		ArrayList<Admin> admin = new ArrayList<>(); //create a arrayList to store admin objects
 
 		try {
 
@@ -44,6 +44,9 @@ public class AdminDButil {
 
 	}
 
+	
+	//insert the admin data to database
+	
 	public static boolean insertAdmin(String name, String tel, String address, String nic,String uname,String pass) {
 
 		boolean isSuccess = false;
@@ -72,7 +75,10 @@ public class AdminDButil {
 		return isSuccess;
 
 	}
+	
 
+	//Update the admin data to database
+	
 	public static boolean updateAdmin(String id, String name, String tel, String address, String nic,String uname,String pass) {
 
 		try {
@@ -99,6 +105,8 @@ public class AdminDButil {
 		return isSuccess;
 	}
 
+	//get the one  admin details from database by userid
+	
 	public static List<Admin> getAdminDetails(String id) {
 
 		int newid = Integer.parseInt(id);
@@ -134,6 +142,9 @@ public class AdminDButil {
 		return admin;
 	}
 
+	
+	//delete admin from db by using empid
+	
 	public static boolean deleteadmin(String id) {
 
 		int sqlid = Integer.parseInt(id);
@@ -160,6 +171,8 @@ public class AdminDButil {
 		return isSuccess;
 
 	}
+	
+	//get all admin details that are in the db table
 
 	public static List<Admin> getallemp() {
 

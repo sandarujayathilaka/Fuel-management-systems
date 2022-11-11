@@ -27,7 +27,7 @@ public class InsertAdmin extends HttpServlet {
 		boolean isTrue = AdminDButil.insertAdmin(name, tel, address, nic,uname,pass);
 		
 		if(isTrue ==true) {
-			RequestDispatcher dis = request.getRequestDispatcher("allempdetails");
+			RequestDispatcher dis = request.getRequestDispatcher("allempdetails");//redirect to AdminAll servlet
 			dis.forward(request, response);		
 		}
 		

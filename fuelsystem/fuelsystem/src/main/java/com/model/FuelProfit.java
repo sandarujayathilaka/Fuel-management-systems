@@ -13,10 +13,12 @@ public class FuelProfit {
 	protected double profitShare;
 	
 	
+	//FuelProfit default constructor
 	public FuelProfit() {
 		this.id ="NULL";
 	}
-
+	
+	//para constructor
 	public FuelProfit(String id,String date,double transportCost, double tax, double dispenserMaintainCost, double initialQuantity,
 			double dayPrice, double restQuantity,double profitShare) {
 		
@@ -32,21 +34,22 @@ public class FuelProfit {
 	}
 
 
+	//get the transport cost
 	public double getTransportCost() {
 		return transportCost;
 	}
 
-
+	//get the date
 	public String getDate() {
 		return date;
 	}
 
-
+	//get the tax value
 	public double getTax() {
 		return tax;
 	}
 
-
+	//get the dispenser maintaining cost
 	public double getDispenserMaintainCost() {
 		return dispenserMaintainCost;
 	}

@@ -13,6 +13,8 @@ public class ResourseDBUtill {
 	private static Statement st = null;
 	private static ResultSet rs = null;
 	
+	
+	//insert diesel data or petrol data to db
 	public static boolean insertSuperDieselData(String cate,String date,String tcost, String tax, String dispenser, String initqun,
 			String dprice, String rqun,String share) {
 
@@ -24,6 +26,7 @@ public class ResourseDBUtill {
 			con = DbConnect.getConnection();
 			st = con.createStatement();
 			
+			//validate the category
 			if (category.equalsIgnoreCase("diesel")) {
 			String sql = "insert into supdiesel values (0,'"+date+"','"+ tcost+"','"+tax+"','"+dispenser+"','"+initqun+"','"+dprice+"','"+rqun+"','"+share+"')";
 			int count = st.executeUpdate(sql);
@@ -64,6 +67,7 @@ public class ResourseDBUtill {
 	
 	}
 	
+	//get the all diesel info from db
 	public static List<Diesel> getDieselData() {
 
 		ArrayList<Diesel> dieselInfo = new ArrayList<>();
@@ -81,11 +85,11 @@ public class ResourseDBUtill {
 				String date = rs.getString(2);
 				double tcost = Double.parseDouble(rs.getString(3));
 				double tax = Double.parseDouble(rs.getString(4));
-				double dispenser = Double.parseDouble(rs.getString(5));;
-				double initqun = Double.parseDouble(rs.getString(6));;
-				double dprice = Double.parseDouble(rs.getString(7));;
-				double rqun = Double.parseDouble(rs.getString(8));;
-				double share = Double.parseDouble(rs.getString(9));;
+				double dispenser = Double.parseDouble(rs.getString(5));
+				double initqun = Double.parseDouble(rs.getString(6));
+				double dprice = Double.parseDouble(rs.getString(7));
+				double rqun = Double.parseDouble(rs.getString(8));
+				double share = Double.parseDouble(rs.getString(9));
 
 				Diesel dieselob = new Diesel(id,date,tcost, tax, dispenser, initqun, dprice, rqun,share);
 				dieselInfo.add(dieselob);
@@ -101,7 +105,7 @@ public class ResourseDBUtill {
 
 	}
 	
-
+	//get the all petrol info from db
 	public static List<Petrol> getPetrolData() {
 
 		ArrayList<Petrol> petrolInfo = new ArrayList<>();
@@ -119,11 +123,11 @@ public class ResourseDBUtill {
 				String date = rs.getString(2);
 				double tcost = Double.parseDouble(rs.getString(3));
 				double tax = Double.parseDouble(rs.getString(4));
-				double dispenser = Double.parseDouble(rs.getString(5));;
-				double initqun = Double.parseDouble(rs.getString(6));;
-				double dprice = Double.parseDouble(rs.getString(7));;
-				double rqun = Double.parseDouble(rs.getString(8));;
-				double share = Double.parseDouble(rs.getString(9));;
+				double dispenser = Double.parseDouble(rs.getString(5));
+				double initqun = Double.parseDouble(rs.getString(6));
+				double dprice = Double.parseDouble(rs.getString(7));
+				double rqun = Double.parseDouble(rs.getString(8));
+				double share = Double.parseDouble(rs.getString(9));
 
 				Petrol petrolob = new Petrol(id,date,tcost, tax, dispenser, initqun, dprice, rqun,share);
 				petrolInfo.add(petrolob);
@@ -137,7 +141,7 @@ public class ResourseDBUtill {
 
 	}
 	
-	
+	//update the diesel info to db
 	public static boolean updateDiesel(String id,String date,String tcost, String tax, String dispenser, String initqun,
 			String dprice, String rqun,String share) {
 
@@ -166,6 +170,7 @@ public class ResourseDBUtill {
 		return isSuccess;
 	}
 	
+	//update the petrol info to db
 	public static boolean updatePetrol(String id,String date,String tcost, String tax, String dispenser, String initqun,
 			String dprice, String rqun,String share) {
 
@@ -194,8 +199,8 @@ public class ResourseDBUtill {
 		return isSuccess;
 	}
 	
-	
-public static List<Diesel> getDieselData(String date) {
+	//get the diesel info by date from db
+	public static List<Diesel> getDieselData(String date) {
 
 		
 
@@ -215,11 +220,11 @@ public static List<Diesel> getDieselData(String date) {
 				String dates = rs.getString(2);
 				double tcost = Double.parseDouble(rs.getString(3));
 				double tax = Double.parseDouble(rs.getString(4));
-				double dispenser = Double.parseDouble(rs.getString(5));;
-				double initqun = Double.parseDouble(rs.getString(6));;
-				double dprice = Double.parseDouble(rs.getString(7));;
-				double rqun = Double.parseDouble(rs.getString(8));;
-				double share = Double.parseDouble(rs.getString(9));;
+				double dispenser = Double.parseDouble(rs.getString(5));
+				double initqun = Double.parseDouble(rs.getString(6));
+				double dprice = Double.parseDouble(rs.getString(7));
+				double rqun = Double.parseDouble(rs.getString(8));
+				double share = Double.parseDouble(rs.getString(9));
 
 				Diesel dieselob = new Diesel(id,dates,tcost, tax, dispenser, initqun, dprice, rqun,share);
 				diesel.add(dieselob);
@@ -233,7 +238,9 @@ public static List<Diesel> getDieselData(String date) {
 		return diesel;
 	}
 
-public static List<Petrol> getPetrolData(String date) {
+
+	//get the petrol info by date from db
+	public static List<Petrol> getPetrolData(String date) {
 
 	
 
@@ -253,11 +260,11 @@ public static List<Petrol> getPetrolData(String date) {
 			String dates = rs.getString(2);
 			double tcost = Double.parseDouble(rs.getString(3));
 			double tax = Double.parseDouble(rs.getString(4));
-			double dispenser = Double.parseDouble(rs.getString(5));;
-			double initqun = Double.parseDouble(rs.getString(6));;
-			double dprice = Double.parseDouble(rs.getString(7));;
-			double rqun = Double.parseDouble(rs.getString(8));;
-			double share = Double.parseDouble(rs.getString(9));;
+			double dispenser = Double.parseDouble(rs.getString(5));
+			double initqun = Double.parseDouble(rs.getString(6));
+			double dprice = Double.parseDouble(rs.getString(7));
+			double rqun = Double.parseDouble(rs.getString(8));
+			double share = Double.parseDouble(rs.getString(9));
 
 			Petrol petrolob = new Petrol(id,dates,tcost, tax, dispenser, initqun, dprice, rqun,share);
 			petrol.add(petrolob);
@@ -271,8 +278,8 @@ public static List<Petrol> getPetrolData(String date) {
 	return petrol;
 }
 
-	
-public static boolean deleteDiesel(String id) {
+	//delete the diesel data from database
+	public static boolean deleteDiesel(String id) {
 
 	try {
 
@@ -296,8 +303,8 @@ public static boolean deleteDiesel(String id) {
 	return isSuccess;
 
 }
-
-public static boolean deletePetrol(String id) {
+	//delete the petrol data from database
+	public static boolean deletePetrol(String id) {
 
 	try {
 
@@ -321,8 +328,8 @@ public static boolean deletePetrol(String id) {
 	return isSuccess;
 
 }
-
-public static Diesel getDieselcal(String id) {
+	//get the diesel data using id
+	public static Diesel getDieselcal(String id) {
 
 	    Diesel dieselob = new Diesel();
 
@@ -340,11 +347,11 @@ public static Diesel getDieselcal(String id) {
 			String dates = rs.getString(2);
 			double tcost = Double.parseDouble(rs.getString(3));
 			double tax = Double.parseDouble(rs.getString(4));
-			double dispenser = Double.parseDouble(rs.getString(5));;
-			double initqun = Double.parseDouble(rs.getString(6));;
-			double dprice = Double.parseDouble(rs.getString(7));;
-			double rqun = Double.parseDouble(rs.getString(8));;
-			double share = Double.parseDouble(rs.getString(9));;
+			double dispenser = Double.parseDouble(rs.getString(5));
+			double initqun = Double.parseDouble(rs.getString(6));
+			double dprice = Double.parseDouble(rs.getString(7));
+			double rqun = Double.parseDouble(rs.getString(8));
+			double share = Double.parseDouble(rs.getString(9));
 
 			dieselob = new Diesel(id1,dates,tcost, tax, dispenser, initqun, dprice, rqun,share);
 			
@@ -357,12 +364,12 @@ public static Diesel getDieselcal(String id) {
 
 	return dieselob;
 }
-
-public static Petrol getPetrolcal(String id) {
+	//get the petrol data using id
+	public static Petrol getPetrolcal(String id) {
 
     Petrol petrolob = new Petrol();
 
-try {
+    try {
 
 	con = DbConnect.getConnection();
 	st = con.createStatement();
@@ -376,22 +383,22 @@ try {
 		String dates = rs.getString(2);
 		double tcost = Double.parseDouble(rs.getString(3));
 		double tax = Double.parseDouble(rs.getString(4));
-		double dispenser = Double.parseDouble(rs.getString(5));;
-		double initqun = Double.parseDouble(rs.getString(6));;
-		double dprice = Double.parseDouble(rs.getString(7));;
-		double rqun = Double.parseDouble(rs.getString(8));;
-		double share = Double.parseDouble(rs.getString(9));;
+		double dispenser = Double.parseDouble(rs.getString(5));
+		double initqun = Double.parseDouble(rs.getString(6));
+		double dprice = Double.parseDouble(rs.getString(7));
+		double rqun = Double.parseDouble(rs.getString(8));
+		double share = Double.parseDouble(rs.getString(9));
 
 		petrolob = new Petrol(id1,dates,tcost, tax, dispenser, initqun, dprice, rqun,share);
 		
 	}
 
-} catch (Exception e) {
+    } catch (Exception e) {
 
 	e.printStackTrace();
-}
+    }
 
-return petrolob;
+    return petrolob;
 }
 	
 	
